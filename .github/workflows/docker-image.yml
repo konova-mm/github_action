@@ -19,5 +19,5 @@ jobs:
       with:
         image: k0nova/g_action
         registry: docker.io
-        username: k0nova
+        username: "k0nova"
         password: ${{ secrets.DOCKERPW }}
