@@ -17,7 +17,7 @@ jobs:
     - name: Build the Docker image
       uses: mr-smithers-excellent/docker-build-push@v4
       with:
-        image: k0nova/g_action:latest
+        image: k0nova/g_action
         registry: docker.io
         username: k0nova
         password: ${{ secrets.DOCKERPW }}
