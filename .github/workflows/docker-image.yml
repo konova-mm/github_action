@@ -15,7 +15,9 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: | 
-        echo "${{ secrets.DOCKERPW }}" | docker login -u "k0nova" --password-stdin
-        docker build -t k0nova/g_action:latest .
-        docker push k0nova/g_action:latest
+      uses: mr-smithers-excellent/docker-build-push@v4
+      with:
+        image: k0nova/g_action:latest
+        registry: docker.io
+        username: "k0nova"
+        password: ${{ secrets.DOCKERPW }}
