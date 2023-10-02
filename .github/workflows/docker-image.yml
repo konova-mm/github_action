@@ -18,5 +18,6 @@ jobs:
       uses: mr-smithers-excellent/docker-build-push@v4
       with:
         image: k0nova/g_action:latest
-        username: "k0nova"
+        registry: docker.io
+        username: k0nova
         password: ${{ secrets.DOCKERPW }}
